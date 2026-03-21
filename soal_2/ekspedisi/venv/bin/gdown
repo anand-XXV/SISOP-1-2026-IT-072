@@ -1,0 +1,8 @@
+#!/home/anand-25/praktikum-modul1/SISOP-1-2026-IT-072/soal_2/ekspedisi/venv/bin/python3
+# -*- coding: utf-8 -*-
+import re
+import sys
+from gdown.__main__ import main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())
