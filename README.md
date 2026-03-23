@@ -8,10 +8,15 @@ Langkah pertama yaitu mendownload dan membuka file passenger.csv yang berada di 
 - dan Gerbong
 
 Di dalam soal, perintah soal menggunakan command Linux dan bantuan awk. Kode awk diberi nama KANJ.sh (sesuai dengan soal) yang berisi dari 5 fungsi, yaitu:
+
 a. Menampilkan jumlah penumpang KANJ
+
 b. Menampilkan jumlah gerbong penumpang KANJ
+
 c. Menampilkan penumpang KANJ yang tertua serta umurnya
+
 d. Menampilkan rata-rata penumpang KANJ
+
 e. Menampilkan jumlah penumpang business KANJ
 
 Setelah membaca soal dan perintah fitur yang harus ada di dalam kode, kita mulai membuat kode penyelesaian dengan ```nano KANJ.sh```
