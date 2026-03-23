@@ -25,12 +25,17 @@ Di dalam KANJ.sh, mulai mengisi dengan
 ```
 BEGIN {
     FS = ","
+    Opsi = ARGV[2]
+    delete ARGV[2]
 }
 
 NR == 1 { next }
 ```
-BEGIN dijalankan sekali untuk membaca data. Setelah BEGIN mulai dengan set FS = "," digunakan untuk memisahkan kolom berdasarkan tanda koma yang sesuai dengan format di dalam file CSVnya.
-NR == 1 { next } digunakan untuk membaca data nomor baris saat ini yaitu 1 (Header) dan langsung skip ke baris berikutnya dengan next.
+'BEGIN' dijalankan sekali untuk membaca data. Setelah BEGIN mulai dengan set FS = "," digunakan untuk memisahkan kolom berdasarkan tanda koma yang sesuai dengan format di dalam file CSVnya.
+'Opsi' menyimpan nilai argumen untuk digunakan di bagian END.
+'ARGV[2]' adalah argumen ketiga yang dimasukkan saat menjalankan perintah yang berfungsi untuk pemilihan opsi a/b/c/d/e, jika ARGVnya [0] atau [1] maka ARGV[0] = 'awk' dan ARGV[1] = 'passenger.csv'
+'delete ARGV[2]' diperlukan agar AWK tidak mencoba membuka a/b/c/d/e sebagai file input.
+'NR == 1 { next }' digunakan untuk membaca data nomor baris saat ini yaitu 1 (Header) dan langsung skip ke baris berikutnya dengan next.
 
 ```
 {
@@ -81,22 +86,16 @@ END dijalankan sekali setelah semua data sudah selesai dibaca.
     }
     else {
         print "Soal tidak dikenali. Gunakan a,b,c,d, atau e."
-        print "Contoh penggunaan: awk -f file.sh Opsi=a data.csv"
+        print "Contoh penggunaan: awk -f file.sh data.csv a"
     }
 }
 ```
 Menampilkan output sesuai dengan pilihan opsi yang sesuai dengan soalnya dan jika opsi yang dipilih bukan a/b/c/d/e akan menampilkan output cara penggunaannya.
 
 Screenshot output a/b/c/d/e dan pilihan diluarnya:
-<img width="1215" height="271" alt="image" src="https://github.com/user-attachments/assets/ef4a0db7-7898-4a84-b033-907db0082f33" />
+<img width="1130" height="274" alt="image" src="https://github.com/user-attachments/assets/a21df353-998d-41e4-95e1-12dc43baefda" />
 
 Kendala:
-Dari soal menspesifikasikan untuk input seperti:
-```awk -f KANJ.sh passenger.csv a```
-
-Tetapi, input tersebut tidak bisa dijalankan karena pilihan a dikirakan sebagai sebuah file, cara memperbaikinya adalah menggunakan ARGV tetapi dari pencarian saya di modul 1 tidak muncuk penjelasan untuK ARGV, tetapi ARGV mulai muncul di modul 2.
-
-Oleh karena itu, soal menggunakan Opsi==a/b/c/d/e sebagai pemilihan opsi input yang seperti berikut:
-```awk -f KANJ.sh -v Opsi=a passenger.csv```
+Tidak ada
 
 ## Soal 2
