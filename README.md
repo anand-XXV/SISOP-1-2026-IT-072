@@ -19,6 +19,7 @@ d. Menampilkan rata-rata penumpang KANJ
 
 e. Menampilkan jumlah penumpang business KANJ
 
+
 Setelah membaca soal dan perintah fitur yang harus ada di dalam kode, kita mulai membuat kode penyelesaian dengan ```nano KANJ.sh```
 
 Di dalam KANJ.sh, mulai mengisi dengan
@@ -96,6 +97,7 @@ Screenshot output a/b/c/d/e dan pilihan diluarnya:
 <img width="1130" height="274" alt="image" src="https://github.com/user-attachments/assets/a21df353-998d-41e4-95e1-12dc43baefda" />
 
 Kendala:
+
 Tidak ada
 
 ## Soal 2
@@ -190,4 +192,5 @@ Screenshot output dan isi file .txt:
 <img width="1361" height="295" alt="image" src="https://github.com/user-attachments/assets/73fb90aa-f097-42dd-98d3-071944c224e8" />
 
 Kendala:
+
 Pembersihan venv supaya tidak muncul di repo github yang cukup rumit
