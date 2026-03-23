@@ -193,4 +193,4 @@ Screenshot output dan isi file .txt:
 
 Kendala:
 
-Pembersihan venv supaya tidak muncul di repo github yang cukup rumit
+Tidak ada
