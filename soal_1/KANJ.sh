@@ -1,46 +1,46 @@
 BEGIN {
-    FS=","
+    FS = ","
 }
 
-NR > 1 {
+NR == 1 { next }
 
-    count++
+{
+    jumlah_penumpang++
+    total_usia += $2
+    gerbong[$4] = 1
 
-    gerbong[$3] = 1
-
-    if ($4 > max) {
-        max = $4
-        nama = $1
+    if ($2 > max_usia) {
+        max_usia = $2
+        tertua = $1
     }
 
-    total = total + $4
-
-    if ($5 == "Business") {
+    if ($3 == "Business") {
         business++
     }
 }
 
 END {
-    if (pilihan == "a") {
-        print "Jumlah seluruh penumpang KANJ adalah " count " orang"
+    for (g in gerbong) {
+        gerbong_penumpang++
     }
-    else if (pilihan == "b") {
-        jumlah = 0
-        for (i in gerbong) jumlah++
-        print "Jumlah gerbong penumpang KANJ adalah " jumlah
+
+    if (Opsi == "a") {
+        print "Jumlah seluruh penumpang KANJ adalah " jumlah_penumpang " orang"
     }
-    else if (pilihan == "c") {
-        print nama " adalah penumpang kereta tertua dengan usia " max " tahun"
+    else if (Opsi == "b") {
+        print "Jumlah gerbong penumpang KANJ adalah " gerbong_penumpang
     }
-    else if (pilihan == "d") {
-        rata = int(total / count)
-        print "Rata-rata usia penumpang adalah " rata " tahun"
+    else if (Opsi == "c") {
+        print tertua " adalah penumpang kereta tertua dengan usia " max_usia " tahun"
     }
-    else if (pilihan == "e") {
+    else if (Opsi == "d") {
+        print "Rata-rata usia penumpang adalah " int(total_usia / jumlah_penumpang) " tahun"
+    }
+    else if (Opsi == "e") {
         print "Jumlah penumpang business class ada " business " orang"
     }
     else {
         print "Soal tidak dikenali. Gunakan a,b,c,d, atau e."
-        print "Contoh penggunaan: awk -v pilihan=a -f KANJ.sh passenger.csv"
+        print "Contoh penggunaan: awk -f file.sh Opsi=a data.csv"
     }
 }
