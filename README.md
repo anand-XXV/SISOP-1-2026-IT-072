@@ -32,11 +32,11 @@ BEGIN {
 
 NR == 1 { next }
 ```
-`BEGIN` dijalankan sekali untuk membaca data. Setelah BEGIN mulai dengan set FS = "," digunakan untuk memisahkan kolom berdasarkan tanda koma yang sesuai dengan format di dalam file CSVnya.
-`Opsi` menyimpan nilai argumen untuk digunakan di bagian END.
-`ARGV[2]` adalah argumen ketiga yang dimasukkan saat menjalankan perintah yang berfungsi untuk pemilihan opsi a/b/c/d/e, jika ARGVnya [0] atau [1] maka ARGV[0] = 'awk' dan ARGV[1] = 'passenger.csv'
-`delete ARGV[2]` diperlukan agar AWK tidak mencoba membuka a/b/c/d/e sebagai file input.
-`NR == 1 { next }` digunakan untuk membaca data nomor baris saat ini yaitu 1 (Header) dan langsung skip ke baris berikutnya dengan next.
+- `BEGIN` dijalankan sekali untuk membaca data. Setelah BEGIN mulai dengan set FS = "," digunakan untuk memisahkan kolom berdasarkan tanda koma yang sesuai dengan format di dalam file CSVnya.
+- `Opsi` menyimpan nilai argumen untuk digunakan di bagian END.
+- `ARGV[2]` adalah argumen ketiga yang dimasukkan saat menjalankan perintah yang berfungsi untuk pemilihan opsi a/b/c/d/e, jika ARGVnya [0] atau [1] maka ARGV[0] = 'awk' dan ARGV[1] = 'passenger.csv'
+- `delete ARGV[2]` diperlukan agar AWK tidak mencoba membuka a/b/c/d/e sebagai file input.
+- `NR == 1 { next }` digunakan untuk membaca data nomor baris saat ini yaitu 1 (Header) dan langsung skip ke baris berikutnya dengan next.
 
 ```
 {
