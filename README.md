@@ -54,7 +54,7 @@ NR == 1 { next }
 ```
 Bagian ini dijalankan untuk setiap baris data penumpang dimana:
 - `jumlah_penumpang++` untuk menghitung total penumpang
-- `total_usia ++ $2` untuk menjumlahkan semua usia penumpang (kolom ke-2)
+- `total_usia += $2` untuk menjumlahkan semua usia penumpang (kolom ke-2)
 - `gerbong[$4] = 1` untuk enyimpan gerbong unik ke dalam array AWK (kolom ke-4)
 - `if ($2 > max_usia)` untuk mencari penumpang dengan usia tertinggi
 - `max_usia = $2` dan `tertua = $1` untuk set usia tertua dan nama penumpang tertua (kolom 2 untuk usia tertua dan kolom 1 untuk nama penumpang tertua)
