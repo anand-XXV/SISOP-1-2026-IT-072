@@ -66,8 +66,8 @@ END {
         gerbong_penumpang++
     }
 ```
-`END` dijalankan sekali setelah semua data sudah selesai dibaca.
-`for (g in gerbong)` adalah loop array gerbong untuk menghitung jumlah gerbong unik.
+- `END` dijalankan sekali setelah semua data sudah selesai dibaca.
+- `for (g in gerbong)` adalah loop array gerbong untuk menghitung jumlah gerbong unik.
 
 ```
     if (Opsi == "a") {
