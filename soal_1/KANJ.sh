@@ -1,5 +1,7 @@
 BEGIN {
     FS = ","
+    Opsi = ARGV[2]
+    delete ARGV[2]
 }
 
 NR == 1 { next }
@@ -41,6 +43,6 @@ END {
     }
     else {
         print "Soal tidak dikenali. Gunakan a,b,c,d, atau e."
-        print "Contoh penggunaan: awk -f file.sh Opsi=a data.csv"
+        print "Contoh penggunaan: awk -f file.sh data.csv a"
     }
 }
