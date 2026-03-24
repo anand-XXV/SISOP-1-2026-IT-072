@@ -1,5 +1,7 @@
 # SISOP-1-2026-IT-072
 
+## I Made Gyanendra Anand Wisnawa // 5027251072
+
 ## Soal 1
 Langkah pertama yaitu mendownload dan membuka file passenger.csv yang berada di dalam soalnya. Di dalam .csv tersebut dapat terlihat bahwa isi data penumpang terdiri dari:
 - Nama Penumpang
