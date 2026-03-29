@@ -100,7 +100,7 @@ Screenshot output a/b/c/d/e dan pilihan diluarnya:
 
 Kendala:
 
-Tidak ada
+Di tengah-tengah pengerjaan sempat salah membaca soal mengakibatkan membuat file passenger.csv sendiri, ternyata di dalam soal sudah ada link file passenger.csv yang disediakan. Jadinya merevisi ulang kode sedikit supaya bisa membaca file passenger.csv yang baru. Saat download passenger.csv, aku drag and drop file tersebut ke dalam folder soal_1, dan karena tadi filenya di drag and drop, nama file tersebut tidak sesuai (passenger.csv - 1) maka perlu rename nama file menjadi passenger.csv terlebih dahulu, baru bisa dibaca dengan KANJ.shnya.
 
 ## Soal 2
 Sesuai dengan rekomendasi soalnya, langkah pertama untuk pengerjaan soalnya adalah dengan mempersiapkan toolsnya.
@@ -195,4 +195,4 @@ Screenshot output dan isi file .txt:
 
 Kendala:
 
-Tidak ada
+Inisialisasi venv cukup membingungkan lalu saat git push kebawa folder venv yang besar dan membuat proses terminal cukup lambat. Akhir-akhirnya menghilangkan folder venv tersebut lalu git push ulang ke dalam repository untuk menghilangkannya supaya sesuai dengan format tree yang dispesifikasikan oleh soal.
